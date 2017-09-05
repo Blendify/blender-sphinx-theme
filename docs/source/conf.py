@@ -17,8 +17,8 @@
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #
-# import os
-# import sys
+import os
+import sys
 # sys.path.insert(0, os.path.abspath('.'))
 
 
@@ -84,7 +84,9 @@ todo_include_todos = False
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = 'alabaster'
+html_theme = 'blender-sphinx-theme'
+
+html_theme_path = ["../..", ]
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
@@ -100,8 +102,6 @@ html_theme = 'alabaster'
 # Custom sidebar templates, must be a dictionary that maps document names
 # to template names.
 #
-# This is required for the alabaster theme
-# refs: http://alabaster.readthedocs.io/en/latest/installation.html#sidebars
 # html_sidebars = {}
 
 
