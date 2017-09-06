@@ -1,4 +1,17 @@
 # Sass stuff
+/plugins/*
+/blender-sphinx-theme/index.php
+/blender-sphinx-theme/twentytwelve/*
+/blender-sphinx-theme/twentyeleven/*
+/blender-sphinx-theme/twentyten/*
+/blender-sphinx-theme/bthree/.DS_Store
+.project
+.DS_Store
+*.sublime*
+
+/blender-sphinx-theme/404.php
+/blender-sphinx-theme/page-frontpage.php
+
 node_modules
 .sass-cache/
 *.css.map

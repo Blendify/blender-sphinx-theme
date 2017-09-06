@@ -20,24 +20,24 @@ var enabled = {
 
 // Styles for the theme
 gulp.task('styles', function() {
-    gulp.src('themes/bthree/src/styles/**/*.sass')
+    gulp.src('blender-sphinx-theme/src/styles/**/*.sass')
         .pipe(gulpif(enabled.failCheck, plumber()))
         .pipe(sass({
             outputStyle: 'compressed'}
             ))
         .pipe(autoprefixer("last 3 version", "safari 5", "ie 8", "ie 9"))
-        .pipe(gulp.dest('themes/bthree'))
+        .pipe(gulp.dest('blender-sphinx-theme'))
         .pipe(livereload());
 });
 
 // Templates
 gulp.task('templates', function() {
-    gulp.src('themes/bthree/src/templates/**/*.jade')
+    gulp.src('blender-sphinx-theme/src/templates/**/*.jade')
         .pipe(gulpif(enabled.failCheck, plumber()))
         .pipe(jade({
             pretty: enabled.prettyPug
         }))
-        .pipe(gulp.dest('themes/bthree/'))
+        .pipe(gulp.dest('blender-sphinx-theme'))
         .pipe(livereload());
 });
 
@@ -47,17 +47,17 @@ gulp.task('templates', function() {
  * Since it's always loaded, it's only for functions that we want site-wide
  */
 gulp.task('scripts_tutti', function() {
-    gulp.src('themes/bthree/src/scripts/tutti/**/*.js')
+    gulp.src('blender-sphinx-theme/src/scripts/tutti/**/*.js')
         .pipe(gulpif(enabled.failCheck, plumber()))
         .pipe(concat("tutti.min.js"))
         .pipe(gulpif(enabled.uglify, uglify()))
-        .pipe(gulp.dest('themes/bthree/assets/js/generated/'))
+        .pipe(gulp.dest('blender-sphinx-theme/assets/js/generated/'))
         .pipe(livereload());
 });
 
 
 gulp.task('reload_theme', function() {
-    gulp.src('themes/bthree/')
+    gulp.src('blender-sphinx-theme')
         .pipe(livereload());
 });
 
@@ -69,13 +69,13 @@ gulp.task('watch',function() {
         livereload.listen();
     }
 
-    gulp.watch('themes/**/*.sass',['styles']);
-    gulp.watch('themes/bthree/assets_shared/sass/**/*.sass', ['styles']);
+    gulp.watch('blender-sphinx-theme/**/*.sass',['styles']);
+    gulp.watch('blender-sphinx-theme/blender-web-assets/sass/**/*.sass', ['styles']);
 
-    gulp.watch('themes/bthree/src/templates/**/*.jade',['templates']);
-    gulp.watch('themes/**/*.php', ['reload_theme']);
+    gulp.watch('blender-sphinx-theme/src/templates/**/*.jade',['templates']);
+    gulp.watch('blender-sphinx-theme/**/*.php', ['reload_theme']);
 
-    gulp.watch('themes/bthree/src/scripts/tutti/*.js',['scripts_tutti']);
+    gulp.watch('blender-sphinx-theme/src/scripts/tutti/*.js',['scripts_tutti']);
 });
 
 
