@@ -69,8 +69,8 @@ gulp.task('watch',function() {
         livereload.listen();
     }
 
-    gulp.watch('themes/**/*.sass',['styles', 'styles_code']);
-    gulp.watch('themes/bthree/assets_shared/sass/**/*.sass', ['styles', 'styles_code']);
+    gulp.watch('themes/**/*.sass',['styles']);
+    gulp.watch('themes/bthree/assets_shared/sass/**/*.sass', ['styles']);
 
     gulp.watch('themes/bthree/src/templates/**/*.jade',['templates']);
     gulp.watch('themes/**/*.php', ['reload_theme']);
@@ -80,4 +80,4 @@ gulp.task('watch',function() {
 
 
 // Run 'gulp' to build everything at once
-gulp.task('default', ['styles', 'styles_code', 'scripts_tutti', 'templates']);
+gulp.task('default', ['styles', 'scripts_tutti', 'templates']);
