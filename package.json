@@ -1,0 +1,21 @@
+{
+  "name": "blender-org",
+  "repository": {
+    "type": "git",
+    "url": "git://git.blender.org/blender-org.git"
+  },
+  "author": "blender.org",
+  "license": "GPL-2.0",
+  "devDependencies": {
+    "gulp": "~3.9.1",
+    "gulp-autoprefixer": "~2.3.1",
+    "gulp-concat": "~2.6.1",
+    "gulp-if": "^2.0.2",
+    "gulp-jade-php": "~2.0.0-0",
+    "gulp-livereload": "~3.8.1",
+    "gulp-plumber": "~1.1.0",
+    "gulp-sass": "~3.1.0",
+    "gulp-uglify": "~2.1.0",
+    "minimist": "^1.2.0"
+  }
+}

@@ -1,0 +1,180 @@
+.page-announcement-main.large
+	.page-footer-main-title .title-head span.text-background,
+	.page-footer-main-text span.text-background
+		+text-background(white, rgba(darken($color-text, 10%), .9), 3px, 3px 0 5px 0)
+
+.features-content
+	width: 100%
+	padding: 10px 20px
+	border-radius: 3px
+	background-color: $color-background-light
+	box-shadow: rgba(black, .25) 0px 1px 4px -1px
+
+	.cards-list-item-title,
+	.cards-list-item-description,
+	.cards-list-item-outer
+		padding-left: 0
+		padding-right: 0
+
+	&.subcat
+		padding-top: 0
+		margin-top: 25px
+		margin-bottom: 10px
+		position: relative
+		border-left: 5px solid $color-secondary
+
+		&:before
+			content: ''
+			background-color: darken($color-background-dark, 5%)
+			width: 100%
+			height: 2px
+			display: block
+			position: absolute
+			top: -20px
+			left: 0
+			right: 0
+
+		.cards-list-item-title
+			color: $color-secondary
+			padding: 0
+
+
+	&.intro,
+	&.subcat .cards-list-item-description
+		font-size: 1.1em
+
+.features-nav
+	width: 100%
+
+	&.affix
+		top: 20px
+
+	ul, ul li, ul li a
+		margin: 0
+		padding: 0
+		list-style-type: none
+		color: $color-text-dark
+
+		&:after
+			content: ''
+
+	a
+		display: flex
+		width: 100%
+
+		&:hover
+			color: mix($color-text-dark, $color-primary, 50%)
+
+	ul.nav
+		border-left: 3px solid $color-text-dark-hint
+		> li
+			margin-top: 10px
+			&:first-child
+				border: none
+				margin-top: 0
+
+			/* Feature Category (Cycles, Eevee, etc) */
+			> a
+				padding: 10px 15px
+				font-size: 1.25em
+
+			&.active > a
+				color: $color-primary
+
+			/* Feature Detail (Bake, GPU, etc) */
+			> ul > li
+				> a
+					padding: 7px 15px 7px 35px
+
+					&:before
+						content: ''
+						position: absolute
+						top: 15px
+						left: 17px
+						width: 4px
+						height: 4px
+						border-radius: 50%
+						background-color: $color-text-dark-hint
+						transition: all 100ms ease-in-out
+
+					&:hover
+						&:before
+							background-color: mix($color-text-dark, $color-primary, 50%)
+
+				&.active > a
+					color: $color-primary
+					&:before
+						width: 7px
+						height: 7px
+						background-color: $color-primary
+						top: 14px
+						left: 16px
+
+.features-index
+	.category-row
+		display: flex
+		width: 100%
+		padding: 10px
+
+		a
+			color: $color-text-dark-secondary
+
+			&:hover
+				color: $color-primary
+				text-decoration: underline
+
+		.category-title, .category-sub-title
+			min-width: 100px
+			max-width: 100px
+			text-align: right
+			font-weight: bold
+
+		.category-sub-row
+			flex: 1
+			display: flex
+			padding: 0 10px
+			margin: 0 0 0 20px
+
+			a
+				color: $color-text-dark-primary
+
+		.category-sub-details
+			display: flex
+			flex-direction: column
+			padding: 0
+			margin: 0 0 0 10px
+			flex: 1
+			border-left: 3px solid rgba($color-text, .1)
+
+			> li
+				padding: 0 10px
+
+				a
+					color: $color-primary
+
+.cards-list.features-category
+	.cards-list-item-inner
+		border-left: 5px solid darken($color-background-dark, 5%)
+	.cards-list-item-outer
+		width: 100%
+		padding-left: 0
+		padding-right: 0
+
+	.cards-list-item-pretitle
+		font-size: .5em
+		text-transform: uppercase
+		float: right
+		color: $color-text-dark-hint
+		position: relative
+		top: -5px
+	.cards-list-item-title
+		font-size: 2em
+		padding-top: 15px
+
+	a.cards-list-item-title:hover
+		color: $color-text-dark
+
+	.cards-list-item-thumbnail
+		&:hover
+			img
+				transform: initial

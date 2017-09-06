@@ -1,0 +1,122 @@
+
+.images-compare
+  margin-top: 10px
+  margin-bottom: 10px
+
+  &-notes
+    color: $color-text-dark-primary
+    font-size: 1.2em
+    text-align: center
+    padding: 5px 15px
+
+.images-compare-container
+  border-radius: 3px
+  display: inline-block
+  overflow: hidden
+  position: relative
+
+  &:hover
+    .images-compare-handle
+      border-color: white
+
+    .images-compare-left-arrow
+      left: 0
+
+    .images-compare-right-arrow
+      right: 0
+
+    .images-compare-separator
+      background: rgba(white, .6)
+
+
+.images-compare-before
+  left: 0
+  pointer-events: none
+  position: absolute
+  overflow: hidden
+  top: 0
+  will-change: clip
+  z-index: 2
+
+
+.images-compare-after
+  pointer-events: none
+
+
+.images-compare-before img,
+.images-compare-after img
+  max-width: 100%
+  height: auto
+  display: block
+
+
+.images-compare-separator
+  position: absolute
+  background: rgba(white, .4)
+  height: 100%
+  width: 1px
+  z-index: 4
+  left: 0
+  top: 0
+
+
+.images-compare-handle
+  border: 2px solid rgba(white, .5)
+  border-radius: 50%
+  cursor: pointer
+  height: 38px
+  position: absolute
+  left: 50%
+  top: 50%
+  transform: translate(-50%, -50%)
+  transition: border-color 150ms ease-in-out
+  width: 38px
+  z-index: 4
+
+
+.images-compare-left-arrow,
+.images-compare-right-arrow
+  border: 6px inset transparent
+  height: 0
+  position: absolute
+  top: 50%
+  transform: translateY(-50%)
+  transition: left 150ms ease-in-out, right 150ms ease-in-out
+  width: 0
+
+
+.images-compare-left-arrow
+  border-right: 6px solid white
+  left: 5px
+
+
+.images-compare-right-arrow
+  border-left: 6px solid white
+  right: 5px
+
+
+.images-compare-label
+  background-color: $color-background
+  border-radius: 3px
+  bottom: 10px
+  box-shadow: 1px 1px 0 rgba(black, .2)
+  color: $color-text-dark
+  display: none
+  font-size: .9em
+  left: 10px
+  padding: 3px 10px
+  pointer-events: none
+  position: absolute
+  z-index: 1
+
+.images-compare-container .images-compare-label
+  display: inherit
+
+
+.images-compare-before .images-compare-label
+  left: 10px
+
+
+.images-compare-after .images-compare-label
+  left: auto
+  right: 10px
