@@ -1,0 +1,4 @@
+[submodule "blender-sphinx-theme/blender-web-assets"]
+	path = blender-sphinx-theme/blender-web-assets
+	url = git://git.blender.org/blender-web-assets.git
+	branch = master
