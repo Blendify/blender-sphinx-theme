@@ -189,7 +189,34 @@
 {%- block extrahead %} {% endblock %}
   </head>
   <body>
-{%- block header %}{% endblock %}
+{%- block header %}
+<a name="hop"></a>
+<header class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-menu">
+        <span class="sr-only">Toggle navigation</span>
+        <i class="fa fa-bars"></i>
+      </button>
+      <a class="navbar-logo" href="https://www.blender.org">
+        <img src="https://www.blender.org/wp-content/themes/bthree/assets/images/logo.png?4c87a8" width="128" height="37">
+      </a>
+    </div>
+
+    <nav class="collapse navbar-collapse" id="navbar-collapse-menu">
+      <ul class="nav navbar-nav navbar-right">
+        <li id="menu-item-10" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10"><a href="https://www.blender.org/features/">Features</a></li>
+        <li id="menu-item-125" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-125"><a href="https://www.blender.org/download/">Download</a></li>
+        <li id="menu-item-126" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-126"><a href="https://www.blender.org/support/">Support</a></li>
+        <li id="menu-item-9" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9"><a href="https://www.blender.org/get-involved/">Get Involved</a></li>
+        <li id="menu-item-164" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-164"><a href="https://www.blender.org/about/">About</a></li>
+        <li id="menu-item-30672" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-30672"><a href="https://www.blender.org/donate">Donate</a></li>
+        <li id="menu-item-1972" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1972"><a href="http://store.blender.org">Store</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+{% endblock %}
 
 {%- block relbar1 %}{{ relbar() }}{% endblock %}
 
