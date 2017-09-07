@@ -105,10 +105,10 @@
 {%- macro css() %}
     <link rel="stylesheet" href="{{ pathto('_static/' + style, 1) }}" type="text/css" />
     <link rel="stylesheet" href="{{ pathto('_static/pygments.css', 1) }}" type="text/css" />
-	<link href="//netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css?4c87a8" rel="stylesheet">
-	<link href="//netdna.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css?4c87a8" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" media="all" href="https://www.blender.org/wp-content/themes/bthree/assets/css/main.css" />
-	<link href="//fonts.googleapis.com/css?family=PT+Sans+Narrow|Roboto" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css?4c87a8" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css?4c87a8" rel="stylesheet">
+	  <link rel="stylesheet" type="text/css" media="all" href="https://www.blender.org/wp-content/themes/bthree/assets/css/main.css" />
+	  <link href="//fonts.googleapis.com/css?family=PT+Sans+Narrow|Roboto" rel="stylesheet">
     {%- for css in css_files %}
       {%- if css|attr("rel") %}
     <link rel="{{ css.rel }}" href="{{ pathto(css.filename, 1) }}" type="text/css"{% if css.title is not none %} title="{{ css.title }}"{% endif %} />
@@ -132,6 +132,20 @@
     {%- else %}
     <meta http-equiv="Content-Type" content="text/html; charset={{ encoding }}" />
     {%- endif %}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Home of the Blender project - Free and Open 3D Creation Software" />
+    <meta name="author" content="Blender Foundation">
+    <meta name="theme-color" content="#ed8f31">
+    <meta property="og:site_name" content="blender.org" />
+    <meta property="og:title" content="Blender Documentation - blender.org" />
+    <meta property="og:description" content="Home of the Blender project - Free and Open 3D Creation Software" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="https://www.blender.org/wp-content/themes/bthree/assets/images/blender_logo_square.png" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@blender_org" />
+    <meta name="twitter:title" content="Blender Documentation - blender.org" />
+    <meta name="twitter:description" content="Home of the Blender project - Free and Open 3D Creation Software" />
+    <meta name="twitter:image" content="https://www.blender.org/wp-content/themes/bthree/assets/images/blender_logo_square.png" />
     {{- metatags }}
     {%- block htmltitle %}
     <title>{{ title|striptags|e }}{{ titlesuffix }}</title>
