@@ -345,7 +345,20 @@
 </div> <!-- footer-navigation -->
 
 {%- block footer %}
-    <div class="footer" role="contentinfo">
+  <footer>
+    <p>Artistic freedom starts with Blender. <i class="fa fa-heart-o"></i> The Free and Open Source 3D Creation Suite - blender.org</p>
+    <div id="hop" title="Be awesome in space"><i class="fa fa-angle-up"></i></div>
+    <script>
+      var hop = document.getElementById("hop");
+      hop.onclick = function(e){ window.scrollTo(0, 0);}
+
+      window.addEventListener("scroll", function() {
+        if (window.pageYOffset > 250){ hop.className = 'active'; } else {	hop.className = ''; }
+      });
+    </script>
+  </footer>
+
+    <!-- <div class="footer" role="contentinfo">
     {%- if show_copyright %}
       {%- if hasdoc('copyright') %}
         {% trans path=pathto('copyright'), copyright=copyright|e %}&#169; <a href="{{ path }}">Copyright</a> {{ copyright }}.{% endtrans %}
@@ -359,7 +372,7 @@
     {%- if show_sphinx %}
       {% trans sphinx_version=sphinx_version|e %}Created using <a href="http://sphinx-doc.org/">Sphinx</a> {{ sphinx_version }}.{% endtrans %}
     {%- endif %}
-    </div>
+    </div> -->
 {%- endblock %}
   </body>
 </html>
