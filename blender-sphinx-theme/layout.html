@@ -27,7 +27,7 @@
 {%- endif %}
 
 {%- macro relbar() %}
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="breadcrumb" role="navigation" aria-label="related navigation">
       <h3>{{ _('Navigation') }}</h3>
       <ul>
         {%- for rellink in rellinks %}
@@ -196,9 +196,9 @@
 {%- block content %}
   {%- block sidebar1 %} {# possible location for sidebar #} {% endblock %}
 
-    <div class="document">
+    <div class="container-main">
   {%- block document %}
-      <div class="documentwrapper">
+      <div class="container">
       {%- if render_sidebar %}
         <div class="bodywrapper">
       {%- endif %}
