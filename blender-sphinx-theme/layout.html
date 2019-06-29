@@ -19,6 +19,10 @@
     <link rel="stylesheet" href="https://www.blender.org/wp-content/plugins/wp-show-posts/css/wp-show-posts-min.css?x71691" type="text/css" media="all" id="wp-show-posts-css" />
 {%- endblock %}
 
+{%- block body_tag %}
+   <body class="ps-support" data-gr-c-s-loaded="true">
+{%- endblock %}
+
 {%- block content %}
    {%- include "topbar.html" %}
    {{ super() }}
