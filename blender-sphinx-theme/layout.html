@@ -1,6 +1,9 @@
 
 {%- extends "basic/layout.html" %}
 
+{%- block relbar1 %}{% endblock %}
+{%- block relbar2 %}{% endblock %}
+
 {%- block extrahead %}
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <meta name="description" content="Home of the Blender project - Free and Open 3D Creation Software" />
@@ -16,7 +19,7 @@
    <meta name="twitter:title" content="Blender Documentation - blender.org" />
    <meta name="twitter:description" content="Home of the Blender project - Free and Open 3D Creation Software" />
    <meta name="twitter:image" content="https://www.blender.org/wp-content/themes/bthree/assets/images/blender_logo_square.png" />
-{% endblock %}
+{%- endblock %}
 
 {%- block scripts %}
    {{ super() }}
@@ -42,7 +45,8 @@
 
 {%- block content %}
    <div class="container-main">
-      {%- include "topbar.html" %}
+      <!-- {%- include "topbar.html" %} -->
+      {% include "breadcrumbs.html" %}
       <div class="container">
          <div class="entry-content">
             <div class="row">
