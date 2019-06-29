@@ -1,2 +1,10 @@
 
 {%- extends "basic/layout.html" %}
+
+{%- block scripts %}
+    {{ super() }}
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://www.blender.org/wp-content/themes/bthree/style.css?x71691" type="text/css" media="screen" />
+    <link rel="stylesheet" href="https://www.blender.org/wp-includes/css/dist/block-library/style.min.css?x71691" type="text/css" media="all" id="wp-block-library-css" />
+    <link rel="stylesheet" href="https://www.blender.org/wp-content/plugins/wp-show-posts/css/wp-show-posts-min.css?x71691" type="text/css" media="all" id="wp-show-posts-css" />
+{%- endblock %}
