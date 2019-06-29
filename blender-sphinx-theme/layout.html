@@ -8,3 +8,8 @@
     <link rel="stylesheet" href="https://www.blender.org/wp-includes/css/dist/block-library/style.min.css?x71691" type="text/css" media="all" id="wp-block-library-css" />
     <link rel="stylesheet" href="https://www.blender.org/wp-content/plugins/wp-show-posts/css/wp-show-posts-min.css?x71691" type="text/css" media="all" id="wp-show-posts-css" />
 {%- endblock %}
+
+{%- block content %}
+   {{ super() }}
+   {%- include "footer.html" %}
+{%- endblock %}
