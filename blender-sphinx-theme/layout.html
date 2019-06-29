@@ -23,8 +23,11 @@
    <body class="ps-support" data-gr-c-s-loaded="true">
 {%- endblock %}
 
+{%- block header %}
+   <!-- {%- include "topbar.html" %} -->
+{%- endblock %}
+
 {%- block content %}
-   {%- include "topbar.html" %}
    {{ super() }}
    {%- include "footer.html" %}
 {%- endblock %}
