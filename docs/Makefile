@@ -2,7 +2,8 @@
 #
 
 # You can set these variables from the command line.
-SPHINXOPTS    =
+BF_LANG      ?= en
+SPHINXOPTS   ?= -j auto -D language='$(BF_LANG)'
 SPHINXBUILD   = python -msphinx
 SPHINXPROJ    = BlenderSphinxthemeDemo
 SOURCEDIR     = source
