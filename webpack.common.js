@@ -60,16 +60,16 @@ module.exports = {
       }
     ]
   },
-//   plugins: [
-//     new MiniCssExtractPlugin({
-//       filename: "css/[name].css?[hash]",
-//       chunkFilename: "css/[name].css?[hash]"
-//     }),
-//     new CopyPlugin([
-//       {
-//         from: 'node_modules/html5shiv/dist/*.min.js',
-//         flatten: true,
-//         to: path.resolve(__dirname,'blender-sphinx-theme/static/js') },
-//     ]),
-//   ]
+  plugins: [
+    new MiniCssExtractPlugin({
+      filename: "css/[name].css?[hash]",
+      chunkFilename: "css/[name].css?[hash]"
+    }),
+    // new CopyPlugin([
+    //   {
+    //     from: 'node_modules/html5shiv/dist/*.min.js',
+    //     flatten: true,
+    //     to: path.resolve(__dirname,'blender-sphinx-theme/static/js') },
+    // ]),
+  ]
 };
