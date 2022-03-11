@@ -8,18 +8,18 @@ from io import open
 from setuptools import setup
 
 setup(
-    name='bthree_sphinx',
+    name='blender-sphinx-theme',
     version='0.1',
     url='https://git.blender.org/gitweb/gitweb.cgi/blender-org.git',
     license='MIT',
     author='Blender Foundation',
     author_email='carlisle.b3d@gmail.com',
     description='Bthree theme for Sphinx',
-    long_description=open('README.rst', encoding='utf-8').read(),
+    long_description=open('README.md', encoding='utf-8').read(),
     cmdclass={},
     zip_safe=False,
-    packages=['bthree_sphinx'],
-    package_data={'bthree_sphinx': [
+    packages=['blender-sphinx-theme'],
+    package_data={'blender-sphinx-theme': [
         'theme.conf',
         '*.html',
         'static/css/*.css',
@@ -30,7 +30,7 @@ setup(
     # See http://www.sphinx-doc.org/en/stable/theming.html#distribute-your-theme-as-a-python-package
     entry_points={
         'sphinx.html_themes': [
-            'bthree_sphinx = bthree_sphinx',
+            'blender-sphinx-theme = blender_sphinx_theme',
         ]
     },
     python_requires='>=2.7,!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*',
