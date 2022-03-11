@@ -10,9 +10,7 @@
   },
   "author": "blender.org",
   "license": "GPL-2.0",
-  "dependencies": {
-    "font-awesome": "^4.7.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "copy-webpack-plugin": "^5.1.2",
     "css-loader": "^3.6.0",
