@@ -1,8 +1,8 @@
 const path = require("path");
-const { merge } = require('webpack-merge')
+const merge = require("webpack-merge");
 const exec = require("child_process").exec;
 const WatchPlugin = require("webpack-watch-files-plugin").default;
-const ShellPlugin = require("webpack-shell-plugin-next");
+const ShellPlugin = require("webpack-shell-plugin");
 const common = require("./webpack.common.js");
 
 module.exports = merge(common, {
@@ -14,13 +14,13 @@ module.exports = merge(common, {
   // _static/. Opening http://localhost:1919 is everything you need for
   // development.
   devServer: {
-    static: "docs/build/html",
+    contentBase: "docs/build/html",
     port: 1919,
     open: false,
     hot: false,
     liveReload: true,
-    // publicPath: "/_static/",
-    // disableHostCheck: true,
+    publicPath: "/_static/",
+    disableHostCheck: true,
     headers: {
       "Access-Control-Allow-Origin": "*"
     }
@@ -30,11 +30,7 @@ module.exports = merge(common, {
       files: ["./docs/**/*.rst", "./docs/**/*.py"]
     }),
     new ShellPlugin({
-      onBuildStart:{
-        scripts: ["make -C docs clean html"],
-        blocking: true,
-        parallel: false
-      }
+      onBuildStart: ["make -C docs clean html"],
     })
   ]
 });
