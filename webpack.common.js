@@ -32,6 +32,14 @@ module.exports = {
           {
             loader: "css-loader"
           },
+          {
+            loader: "sass-loader",
+            options: {
+              sassOptions: {
+                includePaths: ["blender-web-assets/styles/"],
+              },
+            },
+          },
         ]
       },
       {
