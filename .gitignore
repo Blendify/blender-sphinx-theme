@@ -112,3 +112,6 @@ ENV/
 .mypy_cache/
 
 .vscode/
+
+# Compiled assets
+blender-sphinx-theme/static
