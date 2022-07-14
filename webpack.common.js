@@ -18,31 +18,20 @@ module.exports = {
   },
   module: {
     rules: [
-      {
-        test: require.resolve("./src/theme.js"),
-        use: "imports-loader?this=>window"
-      },
+      // {
+      //   test: require.resolve("./src/theme.js"),
+      //   use: "imports-loader?this=>window"
+      // },
       {
         test: /\.sass$/,
         use: [
           {
             loader: MiniCssExtractPlugin.loader,
-            options: {
-              hmr: false,
-              reloadAll: true
-            }
+            options: {}
           },
           {
             loader: "css-loader"
           },
-          {
-            loader: "sass-loader?indentedSyntax",
-            options: {
-              includePaths: [
-                "node_modules/font-awesome/scss"
-              ]
-            }
-          }
         ]
       },
       {
