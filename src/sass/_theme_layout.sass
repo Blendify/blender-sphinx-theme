@@ -9,12 +9,22 @@
 .cards-list.documentation-content
     --cards-list-items-per-row: 1
 
+.headerlink
+    opacity: 0
+    
+    &:focus
+        opacity: 1
+
+    &:hover
+        opacity: 1
+        text-decoration: none
+
 .page-navigation
     +clearfix
 
     a
         align-items: center
-        color: var(--text-color-tertiary)
+        color: var(--text-color-secondary)
         display: flex
         flex: 1 0 auto
         padding: 10px 5px
