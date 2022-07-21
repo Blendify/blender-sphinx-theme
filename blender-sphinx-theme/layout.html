@@ -1,47 +1,47 @@
 {%- extends "basic/layout.html" %}
-{%- block sidebarlogo %}{% endblock %} <div id="isolated" class="">
-</div>
-<div class="container-main">
-   {%- block header %}
-   {%- include "header.html" %}
-   {%- endblock %}
+{%- block sidebarlogo %}{% endblock %}
 
-   {%- block relbar1 %}
-   {%- include "breadcrumbs.html" %}
-   {% endblock %}
-</div>
+{%- block header %}
+{%- include "header.html" %}
+{%- endblock %}
+
+{%- block relbar1 %}
+{%- include "breadcrumbs.html" %}
+{% endblock %}
 
 {%- block content %}
-<div class="container py-4">
-   <div class="row">
-      <div class="col-sm-3">
-         <nav class="sidebar-nav">
-            {%- block sidebar1 %}{{ sidebar() }}{% endblock %}
-         </nav>
-      </div>
-      <div class="col-sm-9 rst-content">
-         <div class="cards-list documentation-content">
-            <div class="cards-list-item-outer subcat">
-               <div class="cards-list-item-inner">
-                  <div class="cards-list-item-description">
-                     {%- block body %} {% endblock %}
+<div class="container-main">
+   <div class="container py-4">
+      <div class="row">
+         <div class="col-sm-3">
+            <nav class="sidebar-nav">
+               {%- block sidebar1 %}{{ sidebar() }}{% endblock %}
+            </nav>
+         </div>
+         <div class="col-sm-9 rst-content">
+            <div class="cards-list documentation-content">
+               <div class="cards-list-item-outer subcat">
+                  <div class="cards-list-item-inner">
+                     <div class="cards-list-item-description">
+                        {%- block body %} {% endblock %}
+                     </div>
                   </div>
                </div>
             </div>
-         </div>
-         <div class="page-navigation single">
-            {%- if prev %}
-            <a href="{{ prev.link|e }}" accesskey="p" rel="prev">
-               <i class="i-chevron-left"></i>
-               <span>{{ prev.title|striptags|e }}</span>
-            </a>
-            {%- endif %}
-            {%- if next %}
-            <a href="{{ next.link|e }}" accesskey="n" rel="next">
-               <span>{{ next.title|striptags|e }}</span>
-               <i class="i-chevron-right"></i>
-            </a>
-            {%- endif %}
+            <div class="page-navigation single">
+               {%- if prev %}
+               <a href="{{ prev.link|e }}" accesskey="p" rel="prev">
+                  <i class="i-chevron-left"></i>
+                  <span>{{ prev.title|striptags|e }}</span>
+               </a>
+               {%- endif %}
+               {%- if next %}
+               <a href="{{ next.link|e }}" accesskey="n" rel="next">
+                  <span>{{ next.title|striptags|e }}</span>
+                  <i class="i-chevron-right"></i>
+               </a>
+               {%- endif %}
+            </div>
          </div>
       </div>
    </div>
