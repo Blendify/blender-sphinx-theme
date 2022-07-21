@@ -26,6 +26,6 @@
     "webpack-dev-server": "^4.9.3",
     "webpack-merge": "^5.8.0",
     "webpack-shell-plugin-next": "^2.2.2",
-    "webpack-watch-files-plugin": "^1.2.0"
+    "webpack-watch-files-plugin": "^1.2.1"
   }
 }
