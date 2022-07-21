@@ -5,6 +5,7 @@
 
   .admonition
     @extend .alert
+    margin-bottom: .5rem
     
     &.note
       @extend .alert-info
@@ -84,3 +85,9 @@
     margin-right: -1rem
     text-align: center
     font-weight: bold
+
+  section > h5, h4, h3, h2, h1
+    clear: both
+
+  figcaption p:last-child
+    margin-bottom: 0
