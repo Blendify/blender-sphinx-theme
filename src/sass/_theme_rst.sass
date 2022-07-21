@@ -2,3 +2,36 @@
 .rst-content
   .guilabel
     background: #000
+
+  .admonition
+    @extend .alert
+    
+    &.note
+      @extend .alert-info
+
+    &.caution
+      @extend .alert-warning
+
+    &.attention
+      @extend .alert-warning
+    
+    &.caution
+      @extend .alert-warning
+
+    &.important
+      @extend .alert-warning
+
+    &.danger
+      @extend .alert-danger
+
+    &.error
+      @extend .alert-danger
+    
+    &.hint
+      @extend .alert-success
+
+    &.tip
+      @extend .alert-success
+
+  .admonition-title
+    @extend .alert-heading !optional
