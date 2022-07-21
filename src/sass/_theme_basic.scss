@@ -41,3 +41,25 @@ img.align-default, figure.align-default, .figure.align-default {
 .centered {
     text-align: center;
 }
+
+// -------------------- Lists --------------------
+
+ol.arabic {
+    list-style: decimal;
+}
+
+ol.loweralpha {
+    list-style: lower-alpha;
+}
+
+ol.upperalpha {
+    list-style: upper-alpha;
+}
+
+ol.lowerroman {
+    list-style: lower-roman;
+}
+
+ol.upperroman {
+    list-style: upper-roman;
+}
