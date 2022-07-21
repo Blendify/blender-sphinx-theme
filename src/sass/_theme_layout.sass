@@ -7,3 +7,48 @@
 
 .cards-list.documentation-content
     --cards-list-items-per-row: 1
+
+.page-navigation
+    +clearfix
+
+    a
+        align-items: center
+        color: var(--text-color-tertiary)
+        display: flex
+        flex: 1 0 auto
+        padding: 10px 5px
+        transition: background-color var(--transition-speed) ease-in-out, color var(--transition-speed) ease-in-out
+        width: 50%
+
+        &:hover
+            color: var(--primary)
+            text-decoration: none
+
+        +media-xs
+            width: 100%
+
+        &+a
+            justify-content: flex-start
+            max-width: 50%
+
+        span
+            +text-overflow-ellipsis
+            max-width: 90%
+            padding: 15px
+
+        &[rel='next']
+            justify-content: flex-end
+            text-align: right
+
+        i
+            font-size: 2em
+            padding: 15px
+
+    &.single
+        align-items: center
+        display: flex
+        justify-content: space-between
+        margin-top: 25px
+
+        +media-xs
+            flex-direction: column
