@@ -58,9 +58,29 @@
     background-color: unset
 
     tr
-      display: -ms-flexbox
       display: flex
       flex-flow: row wrap
     td
       margin-right: auto
       flex: unset
+
+  .sidebar
+    float: right
+    background-color: var(--background-color-secondary)
+    border-radius: var(--border-radius)
+    box-shadow: var(--box-shadow-card)
+    padding-left: 1rem
+    padding-right: 1rem
+    margin-left: .5rem
+
+  .sidebar-title
+    background-color: var(--background-color-tertiary)
+    border-radius: var(--border-radius)
+    padding-top: .5rem
+    padding-bottom: .5rem
+    padding-left: 1rem
+    padding-right: 1rem
+    margin-left: -1rem
+    margin-right: -1rem
+    text-align: center
+    font-weight: bold
