@@ -5,9 +5,14 @@
 
   .admonition
     @extend .alert
-    margin-bottom: .5rem
+    margin-bottom: 1rem
+    color: var(--text-color) !important
+    clear: both
     
     &.note
+      @extend .alert-info
+
+    &.seealso
       @extend .alert-info
 
     &.warning
@@ -37,13 +42,16 @@
   .admonition-title
     @extend .alert-heading !optional
 
+    font-weight: bolder
+    font-size: 110%
+
   blockquote
     font-size: var(--font-size-base)
 
   .docutils.container
     padding: .5rem 0 .5rem 0
 
-  table p
+  table p, .line-block
     text-align: start
 
   table caption
@@ -52,6 +60,11 @@
   table.docutils
     overflow: auto
     display: block
+    margin-bottom: 1rem
+    padding-top: 1rem
+
+    tbody
+      display: table
 
   .hlist
     width: 100%
@@ -89,5 +102,47 @@
   section > h5, h4, h3, h2, h1
     clear: both
 
+  figcaption, caption
+    color: var(--text-color-secondary)
+    font-style: italic
+    font-size: 90%
+
   figcaption p:last-child
     margin-bottom: 0
+
+  dl
+    dt
+      font-weight: bolder
+      color: var(--text-color)
+      font-size: var(--font-size-base)
+
+    dd
+      font-family: var(--font-family-body)
+      margin-left: 2rem
+      padding-bottom: 0
+      border: none
+      margin-bottom: 1rem
+
+      p:last-child
+        margin-bottom: 0
+
+  dl.field-list
+    display: grid
+    grid-template-columns: max-content auto
+
+    > dt:after
+        content: ":"
+
+    > dt, > dd
+      margin-bottom: 0
+      padding-bottom: 0
+
+    dd p:last-child
+      margin-bottom: 0
+
+  p.rubric
+    @extend h5
+
+
+  .sig
+    font-family: var(--font-family-mono)
