@@ -11,7 +11,7 @@ module.exports = {
   },
   output: {
     filename: "js/[name].js?[hash]",
-    path: path.resolve(__dirname, "blender-sphinx-theme/static")
+    path: path.resolve(__dirname, "blender_sphinx_theme/static")
   },
   externals: {
     jquery: "jQuery"
@@ -49,13 +49,13 @@ module.exports = {
       filename: "css/[name].css?[hash]",
       chunkFilename: "css/[name].css?[hash]"
     }),
-    new CopyPlugin({
-      patterns: [
-        {
-          from: "blender-web-assets/font",
-          to: path.resolve(__dirname,'blender-sphinx-theme/static/font') 
-        },
-      ],
-    }),
+    // new CopyPlugin({
+    //   patterns: [
+    //     {
+    //       from: "blender-web-assets/font",
+    //       to: path.resolve(__dirname,'blender_sphinx_theme/static/font') 
+    //     },
+    //   ],
+    // }),
   ]
 };

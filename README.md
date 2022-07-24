@@ -1,3 +1,3 @@
-# blender-sphinx-theme
+# blender_sphinx_theme
 
 Todo.

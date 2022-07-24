@@ -21,7 +21,7 @@ def setup(app):
     app.require_sphinx('3.0')
 
     # Register the theme that can be referenced without adding a theme path
-    app.add_html_theme('blender-sphinx-theme',
+    app.add_html_theme('blender_sphinx_theme',
                        path.abspath(path.dirname(__file__)))
 
     # theme_locale_path = path.join(path.abspath(path.dirname(__file__)), 'locale')

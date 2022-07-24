@@ -114,4 +114,4 @@ ENV/
 .vscode/
 
 # Compiled assets
-blender-sphinx-theme/static
+blender_sphinx_theme/static
