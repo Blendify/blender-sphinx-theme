@@ -1,0 +1,11 @@
+{%- if pagename != "search" and builder != "singlehtml" %}
+<div id="searchbox" role="search">
+    <div class="searchformwrapper">
+        <label class="form-label" for="search-form">Search</label>
+        <form class="search" action="{{ pathto('search') }}" method="get">
+            <input type="search" name="q" class="form-control" id="search-form" />
+            <input type="submit" class="btn btn-light" value="{{ _('Go') }}" />
+        </form>
+    </div>
+</div>
+{%- endif %}
