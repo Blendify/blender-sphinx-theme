@@ -33,7 +33,7 @@ setup(
             'blender_sphinx_theme = blender_sphinx_theme',
         ]
     },
-    python_requires='>=2.7,!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*',
+    python_requires='>=3.4',
     install_requires=[
         'sphinx>=3.0',
         'docutils<0.18',
