@@ -10,7 +10,6 @@
   },
   "author": "blender.org",
   "license": "GPL-2.0",
-  "dependencies": {},
   "devDependencies": {
     "copy-webpack-plugin": "^11.0.0",
     "css-loader": "^6.7.1",
@@ -21,6 +20,7 @@
     "sass": "^1.53.0",
     "sass-loader": "^13.0.2",
     "style-loader": "^3.3.1",
+    "terser-webpack-plugin": "^5.3.3",
     "webpack": "^5.73.0",
     "webpack-cli": "^4.10.0",
     "webpack-dev-server": "^4.9.3",

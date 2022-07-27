@@ -1,4 +1,11 @@
 {%- extends "basic/layout.html" %}
+
+{%- block scripts %}
+{{- script() }}
+<script src="{{ pathto('_static/js/theme.js', 1) }}"></script>
+{%- endblock %}
+
+
 {%- block sidebarlogo %}{% endblock %}
 
 {%- block header %}
