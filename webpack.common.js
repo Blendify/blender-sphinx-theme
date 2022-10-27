@@ -5,8 +5,9 @@ const CopyPlugin = require('copy-webpack-plugin');
 module.exports = {
   entry: {
     theme: [
-        "./src/theme.js",
-        "./src/sass/theme.sass"
+      "./src/theme.js",
+      "./src/version_switch.js",
+      "./src/sass/theme.sass"
     ],
   },
   output: {
