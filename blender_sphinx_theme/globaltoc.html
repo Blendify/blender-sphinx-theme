@@ -1,8 +1,4 @@
-<h3><a href="{{ pathto(root_doc)|e }}">{{ _('Table of Contents') }}</a></h3>
-<!-- <nav id="features-nav" class="features-nav" data-spy="affix" data-offset-top="200" data-offset-bottom="180">
-    <ul class="nav" role="tablist">
-        <div class="local-toc"> -->
-            {{ toctree(includehidden=theme_globaltoc_includehidden, collapse=theme_globaltoc_collapse, maxdepth=theme_globaltoc_maxdepth) }}
-        <!-- </div>
-    </ul>
-</nav> -->
+<div class="local-toc">
+    <h3><a class="root-doc" href="{{ pathto(root_doc)|e }}">{{ _('Table of Contents') }}</a></h3>
+    {{ toctree(includehidden=theme_globaltoc_includehidden, collapse=theme_globaltoc_collapse, maxdepth=theme_globaltoc_maxdepth) }}
+</div>
